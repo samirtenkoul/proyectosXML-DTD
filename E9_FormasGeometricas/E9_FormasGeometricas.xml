@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE formas SYSTEM "E9_FormasGeometricas.dtd">
+<formas>
+	<poligono>
+		<coordX>12</coordX>
+		<coordY>13</coordY>
+		<coordX>17</coordX>
+		<coordY>23</coordY>
+		<coordX>34</coordX>
+		<coordY>56</coordY>
+	</poligono>
+	<poligono>
+		<nombre>Triángulo</nombre>
+	</poligono>
+	<poligono>
+		<nombre>Rectángulo</nombre>
+	</poligono>
+</formas>
