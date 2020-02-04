@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!ELEMENT catalogo (cd+)>
+<!ELEMENT cd (titulo,artista+,origen,compania?,precio,anio)> 
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT artista (#PCDATA)> 
+<!ELEMENT origen (#PCDATA)> 
+<!ELEMENT compania (#PCDATA)> 
+<!ELEMENT precio (#PCDATA)> 
+<!ELEMENT anio (#PCDATA)>

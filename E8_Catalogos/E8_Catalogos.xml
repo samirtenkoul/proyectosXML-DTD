@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<!DOCTYPE catalogo SYSTEM "E9_catalogos.dtd">
+<catalogo>
+	<cd>
+		<titulo>Let it be</titulo>
+		<artista>John Lennon</artista>
+		<artista>Paul McCartney</artista>
+		<origen>UK</origen> 
+		<precio>5.90</precio> 
+		<anio>1970</anio>
+	</cd>
+	<cd>
+		<titulo>Rock &amp; Ros</titulo> 
+		<artista>Miguel Ros</artista> 
+		<origen>ES</origen> 
+		<precio>5.40</precio>
+		<anio>1982</anio>
+	</cd>
+	<cd>
+		<titulo>Picture book</titulo>
+		<artista>Simply Red</artista> 
+		<origen>USA</origen> 
+		<compania>Elektra</compania> 
+		<precio>6.20</precio> 
+		<anio>1985</anio>
+	</cd>
+</catalogo>
