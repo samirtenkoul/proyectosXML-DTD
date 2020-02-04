@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tienda_animales [
+	<!ELEMENT tienda_animales (perro)*>
+	<!--
+	Cantidades: fuera () todos, dentro (perro*) cantidad
+	de cada
+		* :para cuando son 0 o mas veces
+		+ : 1 o mas veces (pero 1 al menos)
+		? : 0 o 1 vez
+	() : entre parentesis los subelementos, de haber mas 
+	de uno se concatenan con | o con , -> perro|veterinario,gato
+	
+	-->
+	<!ELEMENT perro (#PCDATA | nombre | raza)*>
+	<!--
+	Elemento perro tiene subelementos ( nombre | raza)
+	-->
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT raza (#PCDATA)>
+	<!--
+	PCDATA que contiene datos (Extraordinaria hembra), es decir texto
+	-->
+	<!ATTLIST perro fecha_nacimiento CDATA #REQUIRED>
+	<!--
+	ATTlist: atributos (id etc.. lo que va en rojo)
+	perro: primero elemento (azul)
+	fech_nac : despues el atributo (rojo)
+	CDATA : datos, texto (igual que PCdata pero en atributos)
+	-->
+	<!ATTLIST perro sexo (macho | hembra ) #REQUIRED>
+	<!--
+	A continuacion del atributo (sexo) entre parentesis  
+	podemos fijar los posibles valores que puede tener, como si fuera
+	un booleano. Con lo que al fijar los valores entre parentesis nos
+	ahorramos el CDATA
+	#REQUIRED : fijamos como obligatorio el atributo, exclusivo de los
+	atributos
+	#IMPLIED : atributo opcional, exclusivo de los atributos
+	#FIXED : atributo con valor fijo
+	-->
+	<!ATTLIST perro ID CDATA #REQUIRED>
+	<!--ID : (chip)fijamos que este campo es clave principal-->
+	<!ATTLIST perro madre IDREF  CDATA #IMPLIED>
+	<!--IDREF : (madre) fijamos que este campo es clave secundaria-->
+	<!ATTLIST perro padre IDREF  CDATA #IMPLIED>
+	<!ATTLIST perro veterinario CDATA #FIXED "Antonio Garcia Paredes">
+	<!--
+	#FIXED : atributo con valor fijo
+	-->
+]>
+<tienda_animales>
+	<perro fecha_nacimiento="1/4/1994" sexo="hembra" chip="P040">
+	  Extraordinaria hembra 
+	  <raza>labrador</raza>
+	  ,se trajo a la tienda
+	  con una herida en una pata trasera que ...
+	</perro>
+	...
+	<perro fecha_nacimiento="30/5/1996" sexo="macho" chip="P050">
+	  Macho 
+	  <raza>labrador</raza> 
+	  con un pelaje fantástico y una gran fortaleza,...
+	</perro>
+	... 
+	<perro fecha_nacimiento="19/7/2000" sexo="macho" ID="P250"
+ 	       madre="P040" padre="P050">
+	  Este es un estupendo ejemplar de perro 
+	  <raza>labrador</raza>
+	  ,en la tienda le conocemos como 
+	  <nombre>Chispa</nombre> 
+	  por la viveza de sus ojos. Su piel es de color canela...
+	</perro>
+	...
+</tienda_animales>
